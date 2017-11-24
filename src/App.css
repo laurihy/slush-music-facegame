@@ -1,0 +1,261 @@
+body {
+  background: #03061d;
+}
+
+.AppContainer {
+  background: #03061d;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.QuestionContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.PhotoContainer {
+  background: #03061d;
+  flex: 1 0 auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0.2em solid #03061d;
+}
+
+.AnswerContainer {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.ButtonContainer {
+  width: 50%;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  -webkit-appearance: none;
+  flex-direction: row;
+  align-content: center;
+}
+
+.ButtonInner {
+  color: #fff;
+  background: #03061d;
+  margin: 0.3rem;
+  min-height: 3rem;
+  word-wrap: break-word;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.ButtonInner p {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.AnswerButton {
+  width: 50%;
+}
+
+.AnswerButtonInner {
+  color: #03061d;
+  background: #fff;
+}
+
+.NextButton {
+  width: 100%;
+}
+
+.NextButtonInner {
+  color: #fff;
+  background: #03061d;
+}
+
+.CardInner {
+  text-align: center;
+  width: 100%;
+}
+
+.CardPhoto {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.ScoreCounter {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  opacity: .9;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-threshold .ScoreCounter {
+  animation: pulsate ease-in-out 1s infinite alternate;
+}
+
+.second-threshold .ScoreCounter {
+  color: #fff;
+  background: #00B22D;
+  animation: pulsate ease-in-out 1s infinite alternate;
+}
+
+.third-threshold .ScoreCounter {
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  background: #00B22D;
+  animation: pulsate ease-in-out 1s infinite alternate;
+}
+
+.fourth-threshold .ScoreCounter {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  background: #00B22D;
+  animation: pulsate ease-in-out 0.6s infinite alternate;
+}
+
+.AnswerCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider {
+    transition: all 200ms ease-in-out;
+    padding: 20px;
+    display: flex;
+    opacity: 0;
+    -webkit-transform: translate3d(-110%, 130%, 0) rotate(-10deg);
+    -moz-transform: translate3d(-110%, 130%, 0) rotate(-10deg);
+    transform: translate3d(-110%, 130%, 0) rotate(-10deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 3
+}
+
+.slide-open {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0) rotate(0) !important;
+  -moz-transform: translate3d(0%, 0%, 0) rotate(0) !important;
+  transform: translate3d(0%, 0%, 0) rotate(0) !important;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  margin: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.wrong h2 {
+  border: 4px solid #FB0B17;
+  color: #FB0B17;
+}
+
+.correct h2 {
+  border: 4px solid #00B22D;
+  color: #00B22D;
+}
+
+.AnswerCard p {
+  font-size: 0.7rem;
+}
+
+.highlight {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  background: #00B22D;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 0.7rem;
+  animation: pulsate ease-in-out 1s infinite alternate;
+}
+
+.HighScore {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #03061d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  z-index: 5;
+}
+
+.HighScore h1 {
+  border: 2px solid #a04ca6;
+  color: #a54da9;
+  font-weight: normal;
+  padding: 0.8rem;
+}
+
+.inline-thumbnail {
+  display: inline;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+}
+
+@keyframes pulsate {
+    0% {transform: scale(1.0);}
+    100% {transform: scale(1.15);}
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  .AppContainer {
+    max-width: 800px;
+  }
+
+  .slider {
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    border: 10px solid #a04ca6;
+  }
+}
